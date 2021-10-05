@@ -26,7 +26,7 @@ import ApiGame from './apiGames';
     <>
       <div className='imagens'>
           {lista.map((e,key)=>{
-              return <Imagem key={key} image={e.poster_path} titulo={e.title} id={e.id}/>
+              return <Imagem key={key} image={e.poster_path} titulo={e.original_title} id={e.id} item={e.production_companies}/>
           })}
       </div>
     </>
