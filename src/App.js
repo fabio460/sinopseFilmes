@@ -1,28 +1,34 @@
 
 import './App.css';
 import React, { useEffect, useState } from 'react';
+import Imagem from './imagem';
+import ApiGame from './apiGames';
 //import ApiGame from './apiGames';
 //import ApiGame from './apiGames';
 
  
  function  App() {
-  const [userId,setUser]=useState()
-  useEffect(() => {    
-   //let l =await ApiGame.get();
-   
-   //setUser(l)
-
-    async function fetchUser() {
-      const response = await fetch(`https://api.themoviedb.org/3/movie/100?api_key=c67c46d798a0c30ed3e1f1e53bd6e0f2`);
-      const  data  = await response.json();
-      setUser(data);
+  const [lista,setLista]=useState([]);
+  useEffect( () => {    
+   async function carregar(){
+      var obj =[];
+      for(let i = 100; i <= 120;i++){
+        let item =await ApiGame.get(i);
+        obj.push(item) 
+      }
+      setLista(obj)
+      console.log(obj)
     }
-    fetchUser();
+    carregar();
   }, []);
-  console.log(userId)
+  console.log()
   return (
     <>
-      teste
+      <div className='imagens'>
+          {lista.map((e,key)=>{
+              return <Imagem key={key} image={e.poster_path} titulo={e.title} id={e.id}/>
+          })}
+      </div>
     </>
   );
 }

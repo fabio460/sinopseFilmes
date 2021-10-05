@@ -1,4 +1,12 @@
-
+.imagens{
+  display: flex;
+  flex-wrap: wrap;
+  
+}
+.fotos {
+  width: 200px;
+  margin: 20px;
+}
 
 
 
