@@ -1,14 +1,23 @@
 .imagens{
   display: flex;
   flex-wrap: wrap;
-  
+  margin: auto;
+  align-items: center;
+  justify-content: center;
 }
 .fotos {
   width: 200px;
   margin: 20px;
 }
-
-
+header div{
+  cursor: pointer;
+}
+header{
+  display: flex;
+  justify-content: space-between;
+  background-color: black;
+  color: white;
+}
 
 
 
