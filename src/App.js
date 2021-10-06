@@ -64,7 +64,7 @@ import logo from './logo.png';
             <div onClick={passandoAgora}>PassandoAgora</div>
         </div>
         <div className='form'>
-          <input type='text' value={busca} onChange={(e)=>{setBusca(e.target.value)}}/>
+          <input type='text' placeholder='pesquise...' value={busca} onChange={(e)=>{setBusca(e.target.value)}}/>
           <div className='lupa' onClick={buscar}><img src={lupa} alt=''/></div>
         </div>
      </header>
