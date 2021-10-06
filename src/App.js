@@ -4,7 +4,7 @@ import React, { useEffect, useState } from 'react';
 import Imagem from './imagem';
 import ApiGame from './apiGames';
 import lupa from './lupa.png'
-
+import logo from './logo.png';
  
  function  App() {
   const [lista,setLista]=useState([]);
@@ -55,6 +55,7 @@ import lupa from './lupa.png'
     <>
      <header>
         <div className='listaMenu'>
+            <a href='https://fabio460.github.io/Portifolio/' rel=''><img src={logo} alt=''/></a>
             <div onClick={proximos}>Proximos</div>
             <div onClick={maisVotados}>Popular</div>
             <div onClick={tv}>TVs</div>
