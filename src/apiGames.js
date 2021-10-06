@@ -16,8 +16,8 @@ const ApiGame =  {
     let j = await req.json();
     return j
    },
-   recentes:async ()=>{
-    let req =await fetch(`https://api.themoviedb.org/3/movie/latest?api_key=c67c46d798a0c30ed3e1f1e53bd6e0f2&language=pt-BR`)
+   tv:async ()=>{
+    let req =await fetch(`https://api.themoviedb.org/3/discover/tv?api_key=c67c46d798a0c30ed3e1f1e53bd6e0f2&language=pt-BR&sort_by=popularity.asc&page=1&include_null_first_air_dates=false&with_watch_monetization_types=free`)
     let j = await req.json();
     return j
    },

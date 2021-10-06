@@ -3,8 +3,7 @@ import './App.css';
 import React, { useEffect, useState } from 'react';
 import Imagem from './imagem';
 import ApiGame from './apiGames';
-//import ApiGame from './apiGames';
-//import ApiGame from './apiGames';
+import lupa from './lupa.png'
 
  
  function  App() {
@@ -12,24 +11,19 @@ import ApiGame from './apiGames';
   const [busca,setBusca]=useState();
   useEffect( () => {    
    async function carregar(){
-      var obj =[];
-      for(let i = 300; i <= 340;i++){
-        let item =await ApiGame.get(i);
-        obj.push(item) 
-      }
-      setLista(obj)
-      
+      let item =await ApiGame.popular()
+      setLista(item.results)
     }
     carregar();
   }, []);
   
-  const recentes =async ()=>{
-    let item =await ApiGame.recentes()
+  const tv =async ()=>{
+    let item =await ApiGame.tv()
     console.log(item.results)
     setLista(item.results)
   }
-  const popular =async ()=>{
-    let item =await ApiGame.popular()
+  const passandoAgora =async ()=>{
+    let item =await ApiGame.passandoAgora()
     setLista(item.results)
     console.log(item.results)
 
@@ -47,20 +41,24 @@ import ApiGame from './apiGames';
 
   }
   const buscar = async()=>{
-    let item =await ApiGame.buscar(busca)
-    setLista(item.results)
-    console.log(item.results)
+    if(busca){
+      let item =await ApiGame.buscar(busca)
+      setLista(item.results)
+      console.log(item.results)
+    }
   }
   return (
     <>
      <header>
-        <div  onClick={proximos}>proximos</div>
-        <div onClick={maisVotados}>popular</div>
-        <div onClick={recentes}>recentes</div>
-        <div onClick={popular}>maisVotados</div>
-        <div>
+        <div className='listaMenu'>
+            <div onClick={proximos}>Proximos</div>
+            <div onClick={maisVotados}>Popular</div>
+            <div onClick={tv}>TVs</div>
+            <div onClick={passandoAgora}>PassandoAgora</div>
+        </div>
+        <div className='form'>
           <input type='text' value={busca} onChange={(e)=>{setBusca(e.target.value)}}/>
-          <button onClick={buscar}>buscar</button>
+          <div className='lupa' onClick={buscar}><img src={lupa} alt=''/></div>
         </div>
      </header>
       <div className='imagens'>

@@ -1,3 +1,8 @@
+*{
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
 .imagens{
   display: flex;
   flex-wrap: wrap;
@@ -9,8 +14,14 @@
   width: 200px;
   margin: 20px;
 }
-header div{
+.listaMenu div{
   cursor: pointer;
+  margin: 5px 20px;
+}
+.listaMenu{
+  
+  display: flex;
+  align-items: center;
 }
 header{
   display: flex;
@@ -18,12 +29,47 @@ header{
   background-color: black;
   color: white;
 }
+.listaMenu{
+  display: flex;
+  justify-content: space-between;
+  font-size: 20px;
+}
+.form{
+  width: 700px;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 50px;
+}
+.form input{
+  height: 25px;
+  margin: 3px 0px;
+ border-radius: 25px;
+  width: 600px;
+  padding: 8px 15px;
+  font-size: 25px;
+}
+.form .lupa{
+  height: 33px;
+  margin: 3px 0px;
+ 
+}
 
-
-
-
-
-
+.lupa img{
+  width: 25px;
+  border:0px;
+  border-radius: 30px;
+  margin-left: -30px;
+  cursor: pointer;
+}
+.lupa{
+  display: flex;
+  align-items: center;
+}
+.listaMenu div:hover{
+  color: orangered;
+}
 
 
 
