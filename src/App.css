@@ -37,6 +37,9 @@
   display: flex;
   align-items: center;
 }
+.voltar{
+  cursor: pointer;
+}
 header{
   display: flex;
   justify-content: space-between;
@@ -146,6 +149,18 @@ header h1{
 .dataModal{
   text-shadow: black 2px 2px 1px;
   font-size: 22px;
+}
+footer{
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+}
+footer a{
+  margin-left: 10px;
+  color: darkgrey;
 }
 @media (max-width:400px) {
   .sinopse{

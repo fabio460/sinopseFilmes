@@ -72,7 +72,7 @@ import logo from './logo.png';
       <div className='modal'>
         <div className='modalBody ' onClick={fecharModal}>
            <div  className='transparencia'>
-                  <div >{'<'} VOLTAR</div>
+                  <div className='voltar'>{'<'} VOLTAR</div>
                   <div className='fotoModal'></div>
                   <div className='tituloModal'></div>
                   <div className='sinopse'></div>
@@ -87,6 +87,12 @@ import logo from './logo.png';
               return <Imagem objeto={e} key={key} image={e.poster_path} titulo={e.original_title} name={e.name} original_name={e.original_name} id={e.id} item={e.production_companies}/>
           })}
       </div>
+      <footer>
+          <p>acesse minhas redes socias:</p>
+          <a href='https://github.com/fabio460'>github</a>
+          <a href='https://fabio460.github.io/Portifolio/'>portifólio</a>
+          <a href='https://www.linkedin.com/in/fabio-oliveira-b2589163/'>Linkdin</a>
+      </footer>
     </>
   );
 }
