@@ -69,7 +69,9 @@ import logo from './logo.png';
       <div className='modal'>
         <div className='modalBody' onClick={fecharModal}>
            <div className='fotoModal'></div>
+           <div className='tituloModal'></div>
            <div className='sinopse'></div>
+           <div className='dataModal'></div>
         </div>
       </div>
       <div className='imagens'>

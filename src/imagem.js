@@ -10,8 +10,9 @@ function Imagem({image,titulo,id,name,objeto}){
      img.setAttribute('src','https://image.tmdb.org/t/p/w500'+objeto.backdrop_path);
      document.querySelector('.sinopse').innerHTML=objeto.overview;
      fotoModal.appendChild(img)
-     
-     
+     document.querySelector('.tituloModal').innerHTML='<h1>'+objeto.title+'</h1>';
+     document.querySelector('.dataModal').innerHTML='Data de lançamento: '+objeto.release_date;
+     console.log(objeto)
     }
     return<>
       <div onClick={pegarObjeto} className='fotos'>

@@ -20,11 +20,11 @@
   margin: 20px;
   cursor: pointer;
   display: flex;
-  
+  text-align: center;
   
 }
 .fotos:hover{
-  
+  box-shadow: #282c34 4px 3px 0.8px;
   width: 207px;
   margin: 20px;
 }
@@ -101,6 +101,10 @@ header{
   height: 80%;
   background-color: white;
   margin: auto;
+  padding: 30px;
+}
+.dataModal{
+  margin-top: 10px;
 }
 @media (max-width:400px) {
   
