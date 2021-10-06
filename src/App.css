@@ -44,7 +44,7 @@ header{
 }
 .form input{
   height: 25px;
-  margin: 3px 0px;
+  margin: 8px 0px;
  border-radius: 25px;
   width: 600px;
   padding: 8px 15px;
@@ -70,8 +70,50 @@ header{
 .listaMenu div:hover{
   color: orangered;
 }
-
-
+.modal{
+  display: none;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0,0.8);
+}
+.modalBody{
+  width: 80%;
+  height: 80%;
+  background-color: white;
+  margin: auto;
+}
+@media (max-width:400px) {
+  
+   .listaMenu div{
+     font-size: 14px;
+     
+   }
+   .listaMenu{
+     justify-content: space-between;
+     margin: 0;
+   }
+   header{
+     width: 100vw;
+     flex-direction: column;
+     margin: 0;
+     align-items: center;
+     justify-content: center;
+   }
+   .form input{
+     width: 300px;
+     margin: 0;
+   }
+   .form{
+     width: 350px;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     margin: 10px 0px;
+   }
+}
 
 
 

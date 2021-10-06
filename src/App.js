@@ -47,6 +47,10 @@ import lupa from './lupa.png'
       console.log(item.results)
     }
   }
+  const fecharModal = ()=>{
+    document.querySelector('.modal').style.display='none';
+    document.querySelector('.fotoModal').innerHTML='';
+  }
   return (
     <>
      <header>
@@ -61,10 +65,16 @@ import lupa from './lupa.png'
           <div className='lupa' onClick={buscar}><img src={lupa} alt=''/></div>
         </div>
      </header>
+      <div className='modal'>
+        <div className='modalBody' onClick={fecharModal}>
+           <div className='fotoModal'></div>
+           <div className='sinopse'></div>
+        </div>
+      </div>
       <div className='imagens'>
           
           {lista.map((e,key)=>{
-              return <Imagem key={key} image={e.poster_path} titulo={e.original_title} name={e.name} original_name={e.original_name} id={e.id} item={e.production_companies}/>
+              return <Imagem objeto={e} key={key} image={e.poster_path} titulo={e.original_title} name={e.name} original_name={e.original_name} id={e.id} item={e.production_companies}/>
           })}
       </div>
     </>

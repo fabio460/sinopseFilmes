@@ -32,7 +32,7 @@ const ApiGame =  {
     return j
    },
    buscar:async (endpoint)=>{
-    let req =await fetch(`https://api.themoviedb.org/3/search/movie?api_key=c67c46d798a0c30ed3e1f1e53bd6e0f2&query=${endpoint}`)
+    let req =await fetch(`https://api.themoviedb.org/3/search/movie?api_key=c67c46d798a0c30ed3e1f1e53bd6e0f2&query=${endpoint}&language=pt-BR`)
     let j = await req.json();
     return j
    },
