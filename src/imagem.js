@@ -6,7 +6,11 @@ function Imagem({image,titulo,id,name,objeto}){
      document.querySelector('.modal').style.display='flex';
      let imagemCompleta = 'https://image.tmdb.org/t/p/w500'+objeto.backdrop_path;
      let fotoModal = document.querySelector('.modalBody');
+    // let img = document.createElement('img');
+    // img.setAttribute('src',imagemCompleta);
+     //fotoModal.appendChild(img)
      document.querySelector('.sinopse').innerHTML=objeto.overview;
+     
      document.querySelector('.tituloModal').innerHTML='<h1>'+objeto.title+'</h1>';
      document.querySelector('.dataModal').innerHTML='Data de lançamento: '+objeto.release_date;
      fotoModal.style.backgroundImage=`url(${imagemCompleta})`;
