@@ -57,6 +57,7 @@ import logo from './logo.png';
      <header>
         <div className='listaMenu'>
             <a href='https://fabio460.github.io/Portifolio/' rel=''><img src={logo} alt=''/></a>
+            <h1>Sinopse de filmes e series</h1>
             <div onClick={proximos}>Proximos</div>
             <div onClick={maisVotados}>Popular</div>
             <div onClick={tv}>TVs</div>
@@ -69,14 +70,14 @@ import logo from './logo.png';
      </header>
      
       <div className='modal'>
-        <div className='modalBody' onClick={fecharModal}>
-           <div>
-              <div className='fotoModal'></div>
-              <div className='tituloModal'></div>
-              <div className='sinopse'></div>
-              <div className='dataModal'></div> 
-           </div>
-          
+        <div className='modalBody ' onClick={fecharModal}>
+           <div  className='transparencia'>
+                  <div className='fotoModal'></div>
+                  <div className='tituloModal'></div>
+                  <div className='sinopse'></div>
+                  <div className='dataModal'></div> 
+                  
+            </div>          
         </div>
       </div>
       <div className='imagens'>
