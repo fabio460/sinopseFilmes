@@ -50,6 +50,7 @@ import logo from './logo.png';
   const fecharModal = ()=>{
     document.querySelector('.modal').style.display='none';
     document.querySelector('.fotoModal').innerHTML='';
+    //window.location.reload()
   }
   return (
     <>
@@ -66,12 +67,16 @@ import logo from './logo.png';
           <div className='lupa' onClick={buscar}><img src={lupa} alt=''/></div>
         </div>
      </header>
+     
       <div className='modal'>
         <div className='modalBody' onClick={fecharModal}>
-           <div className='fotoModal'></div>
-           <div className='tituloModal'></div>
-           <div className='sinopse'></div>
-           <div className='dataModal'></div>
+           <div>
+              <div className='fotoModal'></div>
+              <div className='tituloModal'></div>
+              <div className='sinopse'></div>
+              <div className='dataModal'></div> 
+           </div>
+          
         </div>
       </div>
       <div className='imagens'>
