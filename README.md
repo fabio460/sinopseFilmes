@@ -5,3 +5,4 @@ No campo input vc busca filmes e series do NetFlix, cada busca e feita com o nom
 deploy : https://treino-sepia.vercel.app/
 ao escolher um titulo, ira mostrar um modal buscado pelo objeto na lista da api
 este objeto e usado para montar o modal 
+Tecnologias: React.js com Hooks, CSS, HTML e javascript
